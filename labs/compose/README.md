@@ -1,3 +1,14 @@
+---
+title: Docker Compose
+lang: en
+slug: compose
+section: compose
+order: 1
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/compose
+---
 # Docker Compose
 
 Docker Compose is a specification for describing apps which run in containers, and a command-line tool which takes those specs and runs them in Docker.

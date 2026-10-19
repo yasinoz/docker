@@ -1,3 +1,14 @@
+---
+title: Limitations of Compose
+lang: en
+slug: compose-limits
+section: compose
+order: 4
+duration: 35
+requires: [docker]
+status: needs-review
+upstream: labs/compose-limits
+---
 # Limitations of Compose
 
 Docker Compose is a client-side tool - it gives you an easy way to model and deploy multi-container apps, but it is not a container orchestrator. 

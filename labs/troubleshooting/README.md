@@ -1,3 +1,14 @@
+---
+title: Troubleshooting Containerized Apps
+lang: en
+slug: troubleshooting
+section: real-world
+order: 1
+duration: 50
+requires: [docker]
+status: needs-review
+upstream: labs/troubleshooting
+---
 # Troubleshooting Containerized Apps
 
 You'll spend a lot of your time with the Docker CLI and your Compose YAML files troubleshooting problems.

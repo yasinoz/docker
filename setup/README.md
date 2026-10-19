@@ -1,3 +1,12 @@
+---
+title: Environment Setup
+lang: en
+slug: setup
+section: index
+order: 0
+status: needs-review
+upstream: setup/README.md
+---
 # Set Up Docker and Git
 
 Docker runs as a background service on server operating systems, but in a local environment the easiest option is Docker Desktop.

@@ -1,0 +1,416 @@
+{
+  "schema": 1,
+  "generated": "2026-10-19",
+  "track": {
+    "slug": "docker",
+    "titles": {
+      "en": "Docker Labs",
+      "tr": "Docker Laboratuvarları"
+    },
+    "summaries": {
+      "en": "Hands-on Docker labs - containers, images, Compose and orchestration.",
+      "tr": "Uygulamalı Docker laboratuvarları — container, imaj, Compose ve orkestrasyon."
+    }
+  },
+  "repo": {
+    "owner": "yasinoz",
+    "name": "docker",
+    "branch": "main"
+  },
+  "raw_base": "https://raw.githubusercontent.com/yasinoz/docker/main",
+  "web_base": "https://github.com/yasinoz/docker/blob/main",
+  "setup": {
+    "en": "setup/README.md"
+  },
+  "languages": [
+    "en"
+  ],
+  "sections": [
+    {
+      "slug": "basics",
+      "order": 1,
+      "titles": {
+        "en": "Container Basics",
+        "tr": "Container Temelleri"
+      },
+      "summaries": {
+        "en": "Running containers, building images and working with registries.",
+        "tr": "Container çalıştırmak, imaj derlemek ve registry kullanmak."
+      },
+      "labs": [
+        {
+          "slug": "containers",
+          "order": 1,
+          "titles": {
+            "en": "Running Containers",
+            "tr": "Container Çalıştırmak"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/containers",
+          "docs": {
+            "en": {
+              "readme": "labs/containers/README.md",
+              "hints": "labs/containers/hints.md",
+              "solution": "labs/containers/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "env",
+          "order": 2,
+          "titles": {
+            "en": "Constructing the Container Environment",
+            "tr": "Container Ortamını Kurmak"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/env",
+          "docs": {
+            "en": {
+              "readme": "labs/env/README.md",
+              "hints": "labs/env/hints.md",
+              "solution": "labs/env/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "images",
+          "order": 3,
+          "titles": {
+            "en": "Building Container Images",
+            "tr": "Container İmajları Derlemek"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/images",
+          "docs": {
+            "en": {
+              "readme": "labs/images/README.md",
+              "hints": "labs/images/hints.md",
+              "solution": "labs/images/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "registries",
+          "order": 4,
+          "titles": {
+            "en": "Accessing Images on Registries",
+            "tr": "Registry Üzerindeki İmajlara Erişmek"
+          },
+          "duration": 30,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/registries",
+          "docs": {
+            "en": {
+              "readme": "labs/registries/README.md",
+              "hints": "labs/registries/hints.md",
+              "solution": "labs/registries/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "compose",
+      "order": 2,
+      "titles": {
+        "en": "Docker Compose",
+        "tr": "Docker Compose"
+      },
+      "summaries": {
+        "en": "Modelling and running multi-container applications.",
+        "tr": "Çok container'lı uygulamaları modellemek ve çalıştırmak."
+      },
+      "labs": [
+        {
+          "slug": "compose",
+          "order": 1,
+          "titles": {
+            "en": "Docker Compose",
+            "tr": "Docker Compose"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/compose",
+          "docs": {
+            "en": {
+              "readme": "labs/compose/README.md",
+              "hints": "labs/compose/hints.md",
+              "solution": "labs/compose/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "compose-model",
+          "order": 2,
+          "titles": {
+            "en": "Modelling Apps with Compose",
+            "tr": "Compose ile Uygulama Modellemek"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/compose-model",
+          "docs": {
+            "en": {
+              "readme": "labs/compose-model/README.md",
+              "hints": "labs/compose-model/hints.md",
+              "solution": "labs/compose-model/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "compose-build",
+          "order": 3,
+          "titles": {
+            "en": "Building Apps with Compose",
+            "tr": "Compose ile Uygulama Derlemek"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/compose-build",
+          "docs": {
+            "en": {
+              "readme": "labs/compose-build/README.md",
+              "hints": "labs/compose-build/hints.md",
+              "solution": "labs/compose-build/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "compose-limits",
+          "order": 4,
+          "titles": {
+            "en": "Limitations of Compose",
+            "tr": "Compose'un Sınırları"
+          },
+          "duration": 35,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/compose-limits",
+          "docs": {
+            "en": {
+              "readme": "labs/compose-limits/README.md",
+              "hints": "labs/compose-limits/hints.md",
+              "solution": "labs/compose-limits/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "advanced",
+      "order": 3,
+      "titles": {
+        "en": "Advanced Images and Networking",
+        "tr": "İleri İmaj ve Ağ"
+      },
+      "summaries": {
+        "en": "Multi-stage builds and how containers talk to each other.",
+        "tr": "Çok aşamalı build ve container'ların birbiriyle konuşması."
+      },
+      "labs": [
+        {
+          "slug": "multi-stage",
+          "order": 1,
+          "titles": {
+            "en": "Multi-Stage Builds",
+            "tr": "Çok Aşamalı Build"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/multi-stage",
+          "docs": {
+            "en": {
+              "readme": "labs/multi-stage/README.md",
+              "hints": "labs/multi-stage/hints.md",
+              "solution": "labs/multi-stage/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "networking",
+          "order": 2,
+          "titles": {
+            "en": "Container Networking",
+            "tr": "Container Ağı"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/networking",
+          "docs": {
+            "en": {
+              "readme": "labs/networking/README.md",
+              "hints": "labs/networking/hints.md",
+              "solution": "labs/networking/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "orchestration",
+      "order": 4,
+      "titles": {
+        "en": "Orchestration",
+        "tr": "Orkestrasyon"
+      },
+      "summaries": {
+        "en": "Running containers across multiple machines.",
+        "tr": "Container'ları birden fazla makinede çalıştırmak."
+      },
+      "labs": [
+        {
+          "slug": "orchestration",
+          "order": 1,
+          "titles": {
+            "en": "Orchestration with Docker Swarm",
+            "tr": "Docker Swarm ile Orkestrasyon"
+          },
+          "duration": 50,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/orchestration",
+          "docs": {
+            "en": {
+              "readme": "labs/orchestration/README.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "kubernetes",
+          "order": 2,
+          "titles": {
+            "en": "Kubernetes",
+            "tr": "Kubernetes"
+          },
+          "duration": 50,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/kubernetes",
+          "docs": {
+            "en": {
+              "readme": "labs/kubernetes/README.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "real-world",
+      "order": 5,
+      "titles": {
+        "en": "Real World",
+        "tr": "Gerçek Dünya"
+      },
+      "summaries": {
+        "en": "What breaks, and how you find out why.",
+        "tr": "Ne bozulur ve sebebini nasıl bulursunuz."
+      },
+      "labs": [
+        {
+          "slug": "troubleshooting",
+          "order": 1,
+          "titles": {
+            "en": "Troubleshooting Containerized Apps",
+            "tr": "Container'lı Uygulamalarda Sorun Giderme"
+          },
+          "duration": 50,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/troubleshooting",
+          "docs": {
+            "en": {
+              "readme": "labs/troubleshooting/README.md",
+              "hints": "labs/troubleshooting/hints.md",
+              "solution": "labs/troubleshooting/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total": 13,
+    "en": 13,
+    "tr": 0,
+    "by_status": {
+      "needs-review": 13
+    }
+  }
+}

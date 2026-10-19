@@ -1,3 +1,14 @@
+---
+title: Container Networking
+lang: en
+slug: networking
+section: advanced
+order: 2
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/networking
+---
 # Container Networking
 
 Docker manages networking - containers can be attached to Docker networks, and containers on the same network can reach each other by IP address.

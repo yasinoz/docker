@@ -1,3 +1,14 @@
+---
+title: Accessing Images on Registries
+lang: en
+slug: registries
+section: basics
+order: 4
+duration: 30
+requires: [docker]
+status: needs-review
+upstream: labs/registries
+---
 
 # Accessing Images on Registries
 

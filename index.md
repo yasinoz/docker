@@ -1,3 +1,12 @@
+---
+title: Docker Labs
+lang: en
+slug: index
+section: index
+order: 0
+status: needs-review
+upstream: index.md
+---
 Welcome to the Docker labs.
 
 These are hands-on resources to help you learn Docker.
@@ -16,31 +25,57 @@ These are hands-on resources to help you learn Docker.
     -   Install [Visual Studio Code](https://code.visualstudio.com) (free - Windows, macOS and Linux) to browse the repo and documentation
 
 
-## Part 1 - Containers and Images
+<!-- labs:start -->
 
-- [Running containers](labs/containers/README.md)
-- [Constructing the container environment](labs/env/README.md)
-- [Building images](labs/images/README.md)
-- [Using image registries](labs/registries/README.md)
+## Container Basics
 
-## Part 2 - Multi-Container Applications
+Running containers, building images and working with registries.
 
-- [Docker Compose](labs/compose/README.md)
-- [Modelling apps with Compose](labs/compose-model/README.md)
-- [Building apps with Compose](labs/compose-build/README.md)
-- [Limitations of Compose](labs/compose-limits/README.md)
+| Lab | Time | Needs |
+|---|---|---|
+| [Running Containers](labs/containers/README.md) | 40 min | docker |
+| [Constructing the Container Environment](labs/env/README.md) | 40 min | docker |
+| [Building Container Images](labs/images/README.md) | 45 min | docker |
+| [Accessing Images on Registries](labs/registries/README.md) | 30 min | docker |
 
-## Part 3 - Advanced Docker
+## Docker Compose
 
-- [Multi-stage builds](labs/multi-stage/README.md)
-- [Container networking](labs/networking/README.md)
-- [Understanding orchestration](labs/orchestration/README.md)
-- [Kubernetes 101](labs/kubernetes/README.md)
+Modelling and running multi-container applications.
 
-## Part 4 - Real-World Docker
+| Lab | Time | Needs |
+|---|---|---|
+| [Docker Compose](labs/compose/README.md) | 45 min | docker |
+| [Modelling Apps with Compose](labs/compose-model/README.md) | 45 min | docker |
+| [Building Apps with Compose](labs/compose-build/README.md) | 45 min | docker |
+| [Limitations of Compose](labs/compose-limits/README.md) | 35 min | docker |
 
-- [Troubleshooting](labs/troubleshooting/README.md) 
-- [Hackathon!](hackathon/README.md)
+## Advanced Images and Networking
+
+Multi-stage builds and how containers talk to each other.
+
+| Lab | Time | Needs |
+|---|---|---|
+| [Multi-Stage Builds](labs/multi-stage/README.md) | 40 min | docker |
+| [Container Networking](labs/networking/README.md) | 40 min | docker |
+
+## Orchestration
+
+Running containers across multiple machines.
+
+| Lab | Time | Needs |
+|---|---|---|
+| [Orchestration with Docker Swarm](labs/orchestration/README.md) | 50 min | docker |
+| [Kubernetes](labs/kubernetes/README.md) | 50 min | docker |
+
+## Real World
+
+What breaks, and how you find out why.
+
+| Lab | Time | Needs |
+|---|---|---|
+| [Troubleshooting Containerized Apps](labs/troubleshooting/README.md) | 50 min | docker |
+
+<!-- labs:end -->
 
 ### Credits
 
