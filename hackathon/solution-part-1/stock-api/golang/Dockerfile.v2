@@ -1,4 +1,4 @@
-FROM golang:1.15.14-alpine3.14 AS builder
+FROM golang:1.27.2-alpine AS builder
 ENV CGO_ENABLED=0
 
 WORKDIR /go/stock-api
@@ -9,7 +9,7 @@ COPY ./src .
 RUN go build -o /server
 
 # app
-FROM alpine:3.14
+FROM alpine:3.24
 
 ENV POSTGRES_CONNECTION_STRING="host=products-db port=5432 user=postgres password=widgetario dbname=postgres sslmode=disable" \
     CACHE_EXPIRY_SECONDS="45" \
