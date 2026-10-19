@@ -1,3 +1,14 @@
+---
+title: Running Containers
+lang: en
+slug: containers
+section: basics
+order: 1
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/containers
+---
 # Running Containers
 
 Containers are a virtual computing environment which Docker creates. When you run a container it typically runs a single process, and you can have that process running in different ways.

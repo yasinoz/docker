@@ -1,3 +1,14 @@
+---
+title: Modelling Apps with Compose
+lang: en
+slug: compose-model
+section: compose
+order: 2
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/compose-model
+---
 # Modelling apps with Compose
 
 You can think of Compose as documentation which replaces `docker run` - all the options you would put in the run commands are specified in the Compose file which becomes living documentation. That includes setting up the container environment with variables and voume mounts.

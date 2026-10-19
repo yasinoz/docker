@@ -1,3 +1,14 @@
+---
+title: Building Container Images
+lang: en
+slug: images
+section: basics
+order: 3
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/images
+---
 # Building Container Images
 
 *Images* are the packages which containers run from. You'll build an image for each component of your application, and the image has all the pre-requisites installed and configured, ready to run.

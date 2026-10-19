@@ -1,3 +1,14 @@
+---
+title: Kubernetes
+lang: en
+slug: kubernetes
+section: orchestration
+order: 2
+duration: 50
+requires: [docker]
+status: needs-review
+upstream: labs/kubernetes
+---
 # Kubernetes
 
 [Kubernetes](https://kubernetes.io) is the most popular container platform, largely because it's supported by all the clouds and many on-prem vendors. You can run Kubernetes in a managed service, or in the datacenter, or on your laptop and it works in the same way.

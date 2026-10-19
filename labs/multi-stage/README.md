@@ -1,3 +1,14 @@
+---
+title: Multi-Stage Builds
+lang: en
+slug: multi-stage
+section: advanced
+order: 1
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/multi-stage
+---
 # Multi-Stage Builds
 
 Multi-stage builds use the standard Dockerfile syntax, with multiple stages separated with `FROM` commands. They give you a repeatable build with minimal dependencies.

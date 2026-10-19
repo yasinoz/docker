@@ -1,3 +1,14 @@
+---
+title: Orchestration with Docker Swarm
+lang: en
+slug: orchestration
+section: orchestration
+order: 1
+duration: 50
+requires: [docker]
+status: needs-review
+upstream: labs/orchestration
+---
 # Orchestration with Docker Swarm
 
 [Swarm Mode](https://docs.docker.com/engine/swarm/) is the orchestration platform built into the Docker Engine. It's easy to get started with because it uses the Docker Compose specification to model apps. 

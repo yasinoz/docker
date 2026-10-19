@@ -1,0 +1,167 @@
+# Docker track - bolum ve lab tanimlari (iki dilli).
+#
+# Bolum ve lab sirasi reponun mevcut index.md dosyasindan alindi; egitmenin
+# kurdugu ogretim sirasi korunuyor.
+#
+# manifest.json bu dosyadan + lab README frontmatter'larindan uretilir:
+#   python ../labs-platform/tools/make-manifest.py . --write-frontmatter
+#
+# status degerleri:
+#   upstream     - henuz dokunulmadi
+#   needs-review - modernize edildi, canli test EDILMEDI
+#   updated      - modernize edildi VE uctan uca calistirildi
+
+track:
+  slug: docker
+  titles:
+    en: Docker Labs
+    tr: Docker Laboratuvarları
+  summaries:
+    en: Hands-on Docker labs - containers, images, Compose and orchestration.
+    tr: Uygulamalı Docker laboratuvarları — container, imaj, Compose ve orkestrasyon.
+  repo:
+    owner: yasinoz
+    name: docker
+    branch: main
+
+sections:
+  - slug: basics
+    order: 1
+    titles:
+      en: Container Basics
+      tr: Container Temelleri
+    summaries:
+      en: Running containers, building images and working with registries.
+      tr: Container çalıştırmak, imaj derlemek ve registry kullanmak.
+    labs:
+      - slug: containers
+        order: 1
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Running Containers
+          tr: Container Çalıştırmak
+      - slug: env
+        order: 2
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Constructing the Container Environment
+          tr: Container Ortamını Kurmak
+      - slug: images
+        order: 3
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Building Container Images
+          tr: Container İmajları Derlemek
+      - slug: registries
+        order: 4
+        duration: 30
+        requires: [docker]
+        titles:
+          en: Accessing Images on Registries
+          tr: Registry Üzerindeki İmajlara Erişmek
+
+  - slug: compose
+    order: 2
+    titles:
+      en: Docker Compose
+      tr: Docker Compose
+    summaries:
+      en: Modelling and running multi-container applications.
+      tr: Çok container'lı uygulamaları modellemek ve çalıştırmak.
+    labs:
+      - slug: compose
+        order: 1
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Docker Compose
+          tr: Docker Compose
+      - slug: compose-model
+        order: 2
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Modelling Apps with Compose
+          tr: Compose ile Uygulama Modellemek
+      - slug: compose-build
+        order: 3
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Building Apps with Compose
+          tr: Compose ile Uygulama Derlemek
+      - slug: compose-limits
+        order: 4
+        duration: 35
+        requires: [docker]
+        titles:
+          en: Limitations of Compose
+          tr: Compose'un Sınırları
+
+  - slug: advanced
+    order: 3
+    titles:
+      en: Advanced Images and Networking
+      tr: İleri İmaj ve Ağ
+    summaries:
+      en: Multi-stage builds and how containers talk to each other.
+      tr: Çok aşamalı build ve container'ların birbiriyle konuşması.
+    labs:
+      - slug: multi-stage
+        order: 1
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Multi-Stage Builds
+          tr: Çok Aşamalı Build
+      - slug: networking
+        order: 2
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Container Networking
+          tr: Container Ağı
+
+  - slug: orchestration
+    order: 4
+    titles:
+      en: Orchestration
+      tr: Orkestrasyon
+    summaries:
+      en: Running containers across multiple machines.
+      tr: Container'ları birden fazla makinede çalıştırmak.
+    labs:
+      - slug: orchestration
+        order: 1
+        duration: 50
+        requires: [docker]
+        titles:
+          en: Orchestration with Docker Swarm
+          tr: Docker Swarm ile Orkestrasyon
+      - slug: kubernetes
+        order: 2
+        duration: 50
+        requires: [docker]
+        titles:
+          en: Kubernetes
+          tr: Kubernetes
+
+  - slug: real-world
+    order: 5
+    titles:
+      en: Real World
+      tr: Gerçek Dünya
+    summaries:
+      en: What breaks, and how you find out why.
+      tr: Ne bozulur ve sebebini nasıl bulursunuz.
+    labs:
+      - slug: troubleshooting
+        order: 1
+        duration: 50
+        requires: [docker]
+        titles:
+          en: Troubleshooting Containerized Apps
+          tr: Container'lı Uygulamalarda Sorun Giderme

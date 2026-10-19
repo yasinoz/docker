@@ -1,3 +1,14 @@
+---
+title: Building Apps with Compose
+lang: en
+slug: compose-build
+section: compose
+order: 3
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/compose-build
+---
 # Building Apps with Compose
 
 Docker Compose models can include build-time details, so you can build multiple container images using one Docker Compose command. Using override files lets you customize the image references and set labels to track the image back to the source code.

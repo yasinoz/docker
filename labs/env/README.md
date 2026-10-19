@@ -1,3 +1,14 @@
+---
+title: Constructing the Container Environment
+lang: en
+slug: env
+section: basics
+order: 2
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/env
+---
 # Constructing the Container Environment
 
 Docker creates the virtual environment for a container. You can specify how parts of the environment should be set, which lets you prepare the container for your applications.
