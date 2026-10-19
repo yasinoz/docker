@@ -38,7 +38,7 @@ Docker networks are first-class citizens. We've been using them already, and Doc
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f labs/networking/compose.yml up -d
+docker compose -f labs/networking/compose.yml up -d
 
 # networks are a top-level object in the Docker CLI:
 docker network ls
@@ -81,7 +81,7 @@ Traffic from outside the container network is restricted, and the only way to se
 Try running a simple web server, publishing to a specific port:
 
 ```
-docker run -d -p 8080:80 sixeyed/whoami:21.04
+docker run -d -p 8080:80 sixeyed/whoami:24.07
 
 curl localhost:8080
 ```
@@ -96,9 +96,9 @@ Ports are single-use resources, only one process can listen on them. If you repe
   <summary>Not sure how?</summary>
 
 ```
-docker run -d -p 8081:80 sixeyed/whoami:21.04
-docker run -d -p 8082:80 sixeyed/whoami:21.04
-docker run -d -p 8083:80 sixeyed/whoami:21.04
+docker run -d -p 8081:80 sixeyed/whoami:24.07
+docker run -d -p 8082:80 sixeyed/whoami:24.07
+docker run -d -p 8083:80 sixeyed/whoami:24.07
 ```
 
 </details><br/>
@@ -177,7 +177,7 @@ You can configure custom networking in Docker Compose too:
 
 ```
 # update the app:
-docker-compose -f labs/networking/compose-network.yml up -d
+docker compose -f labs/networking/compose-network.yml up -d
 
 # try it out at http://localhost:8090
 

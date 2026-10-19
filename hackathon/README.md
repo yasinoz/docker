@@ -30,7 +30,7 @@ There are four components to the app, each will need its own Docker image. The s
 
 - Website- an ASP.NET Core website which reads from the Products and Stock API ([web/dotnet/Dockerfile](./src/web/dotnet/Dockerfile))
 
-You can use `docker build` commands to check all your components, but it might be easier to add build sections to [docker-compose.yml](./src/docker-compose.yml). Then you can use `docker-compose build` to build all the images.
+You can use `docker build` commands to check all your components, but it might be easier to add build sections to [docker-compose.yml](./src/docker-compose.yml). Then you can use `docker compose build` to build all the images.
 
 <details>
   <summary>💡 Hints</summary>
@@ -57,7 +57,7 @@ If you didn't get part 1 finished, you can check out the sample solution from `h
 Build from the sample solution and you can continue to part 1:
 
 ```
-docker-compose -f hackathon/solution-part-1/docker-compose.yml build
+docker compose -f hackathon/solution-part-1/docker-compose.yml build
 ```
 
 </details><br/>
@@ -93,7 +93,7 @@ If you didn't get part 2 finished, you can check out the sample solution from [h
 Deploy the sample solution and you can continue to part 3:
 
 ```
-docker-compose -p hackathon -f hackathon/solution-part-2/docker-compose.yml up -d
+docker compose -p hackathon -f hackathon/solution-part-2/docker-compose.yml up -d
 ```
 
 </details><br/>
@@ -137,7 +137,7 @@ If you didn't get part 3 finished, you can check out the specs in the sample sol
 Deploy the sample solution and you can continue to part 4:
 
 ```
-docker-compose -p hackathon -f hackathon/solution-part-3/docker-compose.yml up -d
+docker compose -p hackathon -f hackathon/solution-part-3/docker-compose.yml up -d
 
 # test the app and you'll be able to see the logs with:
 cat ./hackathon/solution-part-3/logs/web/app.log
@@ -180,7 +180,7 @@ If you didn't get part 4 finished, you can check out the specs in the sample sol
 Deploy the sample solution:
 
 ```
-docker-compose -p hackathon -f hackathon/solution-part-4/docker-compose.yml up -d
+docker compose -p hackathon -f hackathon/solution-part-4/docker-compose.yml up -d
 ```
 
 </details><br/>
@@ -192,5 +192,5 @@ ___
 ## Cleanup
 
 ```
-docker-compose -p hackathon -f hackathon/solution-part-4/docker-compose.yml down
+docker compose -p hackathon -f hackathon/solution-part-4/docker-compose.yml down
 ```

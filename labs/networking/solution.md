@@ -3,13 +3,13 @@
 Roll back to the earlier deployment:
 
 ```
-docker-compose -f labs/networking/compose.yml up -d
+docker compose -f labs/networking/compose.yml up -d
 ```
 
 And you can scale up with the Compose CLI:
 
 ```
-docker-compose -f labs/networking/compose.yml up -d --scale rng-api=3
+docker compose -f labs/networking/compose.yml up -d --scale rng-api=3
 ```
 
 > You'll see two new API containers created.
@@ -17,7 +17,7 @@ docker-compose -f labs/networking/compose.yml up -d --scale rng-api=3
 Follow the logs from all API containers:
 
 ```
-docker-compose -f labs/networking/compose.yml logs -f rng-api
+docker compose -f labs/networking/compose.yml logs -f rng-api
 ```
 
 > Use the app at http://localhost:8090 and you'll see different API containers generating numbers.
