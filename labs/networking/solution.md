@@ -25,7 +25,7 @@ docker compose -f labs/networking/compose.yml logs -f rng-api
 Inspect the API containers and you'll see compose sets the same network alias for each of them:
 
 ```
-docker inspect networking_rng-api_1
+docker inspect networking-rng-api-1
 ```
 
 - includes the container's hostname and the Compose service name in the .NetworkSettings.Networks section, e.g.
