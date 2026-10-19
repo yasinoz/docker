@@ -1,0 +1,97 @@
+name: Lab dogrulama
+
+# Dersi bozan hatalarin repoya sizmasini engeller.
+#
+# Araclar yasinoz/labs-platform reposunda tutulur; surum matrisi ve kurallar
+# tek yerde yasasin diye. Iki repo YAN YANA checkout edilir: platform lab
+# reposunun ICINE alinirsa lint platformun kendi dosyalarini da tarar ve
+# VERSIONS.yaml'daki 'image: jenkins/jenkins' satirlarini pinlenmemis imaj
+# sanar.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lab reposunu al
+        uses: actions/checkout@v5
+        with:
+          path: repo
+
+      - name: Platform araclarini al
+        uses: actions/checkout@v5
+        with:
+          repository: yasinoz/labs-platform
+          path: platform
+
+      - name: Python kur
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: manifest.json guncel mi
+        # Henuz sections.yaml'i olmayan track'lerde bu adim atlanir.
+        run: |
+          if [ -f repo/sections.yaml ]; then
+            python platform/tools/make-manifest.py repo --check
+          else
+            echo "sections.yaml yok - manifest kontrolu atlandi"
+          fi
+
+      - name: Mekanik sorunlar (compose v1, pinlenmemis/eski imaj)
+        run: |
+          python platform/tools/lab-lint.py repo \
+            --versions platform/VERSIONS.yaml \
+            --only compose,pins,stale
+
+      - name: Kirik baglantilar
+        run: |
+          python platform/tools/lab-lint.py repo \
+            --versions platform/VERSIONS.yaml \
+            --only links
+
+      - name: Frontmatter
+        # Frontmatter yalnizca iki dilli yapiya gecirilmis repolarda zorunlu.
+        run: |
+          if [ -f repo/sections.yaml ]; then
+            python platform/tools/lab-lint.py repo \
+              --versions platform/VERSIONS.yaml --only frontmatter
+          else
+            echo "sections.yaml yok - frontmatter kontrolu atlandi"
+          fi
+
+      - name: Ceviri durumu (bilgilendirme)
+        # Ceviri henuz tamamlanmadi; bu adim hata saymaz. Tum lablar
+        # cevrildiginde '|| true' kaldirilacak.
+        run: |
+          python platform/tools/lab-lint.py repo \
+            --versions platform/VERSIONS.yaml \
+            --only i18n,parity || true
+
+  compose-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Tum compose dosyalarini dogrula
+        run: |
+          # 'docker compose config' dosyayi ayristirir ve degiskenleri cozer;
+          # sozdizimi hatasi varsa burada yakalanir.
+          fail=0
+          while IFS= read -r f; do
+            if grep -qE '^[[:space:]]*services[[:space:]]*:' "$f"; then
+              if ! out=$(docker compose -f "$f" config 2>&1); then
+                echo "::error file=$f::compose ayristirma hatasi"
+                echo "$out" | head -20
+                fail=1
+              else
+                echo "ok  $f"
+              fi
+            fi
+          done < <(find . -name '*.yml' -o -name '*.yaml' | grep -v '^./.git' | sort)
+          exit $fail
