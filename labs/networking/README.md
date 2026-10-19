@@ -72,13 +72,13 @@ Use them to check the network setup:
 
 ```
 # run a DNS lookup for the API service name:
-docker exec networking_rng-web_1 nslookup rng-api
+docker exec networking-rng-web-1 nslookup rng-api
 
 # ping the IP address of the API container :
-docker exec networking_rng-web_1 ping -c3 <rng-api-ip>
+docker exec networking-rng-web-1 ping -c3 <rng-api-ip>
 
 # try calling the API inside the web container:
-docker exec networking_rng-web_1 wget -qO- rng-api/rng
+docker exec networking-rng-web-1 wget -qO- rng-api/rng
 ```
 
 > The Docker DNS server returns the IP address for container names and network aliases. The web container can access the API container on the standard HTTP port 80.
@@ -193,7 +193,7 @@ docker compose -f labs/networking/compose-network.yml up -d
 # try it out at http://localhost:8090
 
 # print the container's network details:
-docker exec networking_rng-api_1 sh /scripts/network-info.sh
+docker exec networking-rng-api-1 sh /scripts/network-info.sh
 ```
 
 </details><br/>
@@ -201,7 +201,7 @@ docker exec networking_rng-api_1 sh /scripts/network-info.sh
 Check the logs of the web container and you'll see it's using the custom IP address for the API container:
 
 ```
-docker logs networking_rng-web_1
+docker logs networking-rng-web-1
 ```
 
 > You don't often need to customize networking like this - containers are supposed to run in a dynamic environment. But this is very useful for moving older apps to containers, if they have fixed expectations about the environment.
