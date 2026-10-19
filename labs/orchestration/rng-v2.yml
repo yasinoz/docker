@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
   rng-api:
     image: courselabs/rng-api:21.05

@@ -17,12 +17,12 @@ It's a _desired-state_ approach, where you model your apps in YAML and the Compo
 The original Docker Compose CLI is a separate tool:
 
 ```
-docker-compose --help
+docker compose --help
 
-docker-compose up --help
+docker compose up --help
 ```
 
-The latest versions of Docker have the Compose command built-in. The commands are the same, minus the hyphen so `docker-compose` becomes `docker compose`:
+The latest versions of Docker have the Compose command built-in. The commands are the same, minus the hyphen so `docker compose` becomes `docker compose`:
 
 ```
 docker compose --help
@@ -30,7 +30,7 @@ docker compose --help
 docker compose up --help
 ```
 
-> This is new functionality and it's not 100% compatible with the original Compose CLI. For this lab you should be able to use either, but if you have any issues stick with `docker-compose`.
+> This is new functionality and it's not 100% compatible with the original Compose CLI. For this lab you should be able to use either, but if you have any issues stick with `docker compose`.
 
 </details><br/>
 
@@ -77,17 +77,17 @@ You can use Compose even for simple apps - this just defines an Nginx container:
 Docker Compose has its own command line - this tells you the available commands:
 
 ```
-docker-compose
+docker compose
 ```
 
-📋 Run this application using the `docker-compose` CLI.
+📋 Run this application using the `docker compose` CLI.
 
 <details>
   <summary>Not sure how?</summary>
 
 ```
 # run 'up' to start the app, pointing to the Compose file
-docker-compose -f ./labs/compose/nginx/docker-compose.yml up
+docker compose -f ./labs/compose/nginx/docker-compose.yml up
 ```
 
 </details><br/>
@@ -113,13 +113,13 @@ Compose is more useful with more components. [rng/v1.yml](./rng/v1.yml) defines 
 
 ```
 # run the app:
-docker-compose -f ./labs/compose/rng/v1.yml up -d
+docker compose -f ./labs/compose/rng/v1.yml up -d
 
 # use compose to show just this app's containers:
-docker-compose -f ./labs/compose/rng/v1.yml ps
+docker compose -f ./labs/compose/rng/v1.yml ps
 
 # and this app's logs:
-docker-compose -f ./labs/compose/rng/v1.yml logs
+docker compose -f ./labs/compose/rng/v1.yml logs
 ```
 
 </details><br/>
@@ -152,7 +152,7 @@ The API publishes a port, so we can check it independently.
 
 ```
 # the API is listening on port 8089 - you can see that in the Compose file or use the CLI:
-docker-compose -f ./labs/compose/rng/v1.yml port rng-api 80
+docker compose -f ./labs/compose/rng/v1.yml port rng-api 80
 
 curl localhost:8089/rng
 ```
@@ -195,9 +195,9 @@ Here we'll see the desired-state approach. If you need to change your applicatio
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f ./labs/compose/rng/v2.yml up -d
+docker compose -f ./labs/compose/rng/v2.yml up -d
 
-docker-compose -f ./labs/compose/rng/v2.yml logs -f
+docker compose -f ./labs/compose/rng/v2.yml logs -f
 ```
 
 </details><br/>

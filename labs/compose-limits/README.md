@@ -21,7 +21,7 @@ Applications fail and that can cause containers to exit. In production you would
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f labs/compose-limits/rng/v1.yml up -d
+docker compose -f labs/compose-limits/rng/v1.yml up -d
 ```
 
 </details><br/>
@@ -61,7 +61,7 @@ You can configure containers to automatically restart if they exit:
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f labs/compose-limits/rng/v2.yml up -d
+docker compose -f labs/compose-limits/rng/v2.yml up -d
 ```
 
 </details><br/>
@@ -88,7 +88,7 @@ You can increase reliability and the amount of load your apps can handle by runn
 Deploy the update and check the output from the CLI:
 
 ```
-docker-compose -f labs/compose-limits/rng/v3.yml up -d
+docker compose -f labs/compose-limits/rng/v3.yml up -d
 ```
 
 > You'll see errors about port allocation. The web service publishes a port - only one container can use a specific port, so you can't run public components at scale with Compose.
@@ -130,7 +130,7 @@ The final limitation with Compose is that you can only use the resources availab
   <summary>Not sure how?</summary>
 
 ```
-docker-compose -f labs/compose-limits/rng/v4.yml up -d
+docker compose -f labs/compose-limits/rng/v4.yml up -d
 
 docker ps -a
 ```

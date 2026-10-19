@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-11 AS builder
+FROM maven:3.10-eclipse-temurin-25-noble AS builder
 
 WORKDIR /usr/src/api
 COPY . .
@@ -7,7 +7,7 @@ RUN chmod +x restore.sh && ./restore.sh
 RUN chmod +x build.sh  && ./build.sh
 
 # app
-FROM openjdk:11.0.12-jre-slim-buster
+FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 COPY --from=builder /usr/src/api/target/products-api-0.1.0.jar .
