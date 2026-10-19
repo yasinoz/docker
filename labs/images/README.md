@@ -220,3 +220,12 @@ Cleanup by removing all containers:
 ```
 docker rm -f $(docker ps -aq)
 ```
+
+> On **PowerShell** the command substitution syntax is different:
+>
+> ```
+> docker rm -f @(docker ps -aq)
+> ```
+>
+> ⚠️ Either version removes **every** container on your machine, not just the
+> ones from this lab. Run `docker ps` first if you have other work running.

@@ -68,7 +68,7 @@ We've made a good start - all the components are packaged into container images 
 
 Use this architecture diagram as the basis to model your YAML:
 
-![](/img/widgetario-architecture.png)
+![](../img/widgetario-architecture.png)
 
 > The diagram shows the Docker image tags for each component and the port(s) to publish. You can use these images from Docker Hub, or your own images from part 1.
 
@@ -83,7 +83,7 @@ The component names in the diagram are the DNS names the app expects to use. It 
 
 When you're done you should be able to browse to http://localhost:8080 and see this:
 
-![](/img/widgetario-solution-1.png)
+![](../img/widgetario-solution-1.png)
 
 <details>
   <summary>🎯 Solution</summary>
@@ -121,7 +121,7 @@ You have the app working from part 2, so you can investigate the current configu
 
 When you've rolled out your update, the UI will be updated but the products and stock details should be the same:
 
-![](/img/widgetario-solution-2.png)
+![](../img/widgetario-solution-2.png)
 
 You should be able to see the logs from the web app in your local filesystem:
 

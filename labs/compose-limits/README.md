@@ -150,8 +150,14 @@ This is just a thinking lab :) We've seen the limitations of Docker Compose - wh
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/compose-limits/rng/v1.yml down
+docker compose -f labs/compose-limits/rng/v2.yml down
+docker compose -f labs/compose-limits/rng/v3.yml down
+docker compose -f labs/compose-limits/rng/v4.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.
