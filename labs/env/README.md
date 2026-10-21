@@ -48,7 +48,7 @@ Environment variables are key-value pairs set in the OS. Applications can read t
 ```
 docker run alpine printenv
 
-docker run openjdk:8-jre-alpine printenv
+docker run eclipse-temurin:25-jre printenv
 ```
 
 > You'll see variables set by the OS and in the container package.
@@ -70,7 +70,7 @@ docker run -e COURSELABS=env alpine printenv
 You can add as many environment variables as you need, and you can also *override* default variables for the container:
 
 ```
-docker run -e COURSELABS=env -e LANG=C.UTF-16 openjdk:8-jre-alpine printenv
+docker run -e COURSELABS=env -e LANG=C.UTF-16 eclipse-temurin:25-jre printenv
 ```
 
 > This overrides the default language setting in the Java container.
