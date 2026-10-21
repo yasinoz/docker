@@ -1,6 +1,6 @@
 services:
   rng-api:
-    image: courselabs/rng-api:21.05
+    image: ghcr.io/yasinoz/courselabs/rng-api:21.05
     entrypoint: ["dontet", "/app/Numbers.Api.dll"]
     env_file: ./config/logging.env
     ports:

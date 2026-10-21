@@ -92,7 +92,7 @@ Traffic from outside the container network is restricted, and the only way to se
 Try running a simple web server, publishing to a specific port:
 
 ```
-docker run -d -p 8080:80 sixeyed/whoami:24.07
+docker run -d -p 8080:80 ghcr.io/yasinoz/sixeyed/whoami:24.07
 
 curl localhost:8080
 ```
@@ -107,9 +107,9 @@ Ports are single-use resources, only one process can listen on them. If you repe
   <summary>Not sure how?</summary>
 
 ```
-docker run -d -p 8081:80 sixeyed/whoami:24.07
-docker run -d -p 8082:80 sixeyed/whoami:24.07
-docker run -d -p 8083:80 sixeyed/whoami:24.07
+docker run -d -p 8081:80 ghcr.io/yasinoz/sixeyed/whoami:24.07
+docker run -d -p 8082:80 ghcr.io/yasinoz/sixeyed/whoami:24.07
+docker run -d -p 8083:80 ghcr.io/yasinoz/sixeyed/whoami:24.07
 ```
 
 </details><br/>

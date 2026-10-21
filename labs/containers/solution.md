@@ -25,7 +25,7 @@ Check the [tags page on Docker Hub](https://hub.docker.com/_/eclipse-temurin/tag
 The JRE build for Alpine is the smallest - the tag contains the version number, so this pulls a small JRE image for OpenJDK 23:
 
 ```
-docker pull eclipse-temurin:23-jre-alpine
+docker pull ghcr.io/yasinoz/library/eclipse-temurin:23-jre-alpine
 ```
 
 Check the sizes:

@@ -1,6 +1,6 @@
 services:
   rng-api:
-    image: courselabs/rng-api:21.05
+    image: ghcr.io/yasinoz/courselabs/rng-api:21.05
     environment:
       - Logging__LogLevel__Default=Debug
     volumes: 
@@ -10,7 +10,7 @@ services:
         ipv4_address: 10.218.0.10
 
   rng-web:
-    image: courselabs/rng-web:21.05
+    image: ghcr.io/yasinoz/courselabs/rng-web:21.05
     environment:
       - Logging__LogLevel__Default=Debug
       - RngApi__Url=http://10.218.0.10/rng
