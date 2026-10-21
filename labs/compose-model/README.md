@@ -17,6 +17,22 @@ The Compose spec also includes higher-level modelling for configuration files, u
 
 Compose models can be split across multiple files, which makes it easy to run the same app in different configurations on a single machine.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)

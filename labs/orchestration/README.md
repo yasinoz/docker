@@ -16,6 +16,22 @@ upstream: labs/orchestration
 Swarm isn't widely used any more, but it's a fully-featured container platform so it's a good introduction to orchestration concepts.
 
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 50 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Swarm Mode introduction](https://docs.docker.com/engine/swarm/)

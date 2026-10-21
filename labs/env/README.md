@@ -13,6 +13,22 @@ upstream: labs/env
 
 Docker creates the virtual environment for a container. You can specify how parts of the environment should be set, which lets you prepare the container for your applications.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 40 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## CLI Reference
 
 Container environments are static - the details are fixed for the life of the container. You configure the environment in the `docker run` command:

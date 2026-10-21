@@ -15,6 +15,22 @@ Docker Compose is a client-side tool - it gives you an easy way to model and dep
 
 The main limitation of Compose is that it runs on a single server. There's no way to manage multiple servers with Compose, so you can't make your apps fully scalable and reliable.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 35 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## References
 
 - [Compose in production](https://docs.docker.com/compose/production/)

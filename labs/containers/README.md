@@ -13,6 +13,22 @@ upstream: labs/containers
 
 Containers are a virtual computing environment which Docker creates. When you run a container it typically runs a single process, and you can have that process running in different ways.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 40 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## CLI Reference
 
 - [Docker command line reference](https://docs.docker.com/engine/reference/commandline/cli/)
