@@ -8,7 +8,9 @@ RUN apk --no-cache --no-progress add \
     && update-ca-certificates 
 
 WORKDIR /go/whoami
-COPY go.mod .
+# go.sum da kopyalaniyor: modern Go eksik go.sum ile build etmiyor
+# ("missing go.sum entry for module providing package ...").
+COPY go.mod go.sum ./
 RUN go mod download
 
 COPY app.go .
