@@ -48,7 +48,7 @@ Environment variables are key-value pairs set in the OS. Applications can read t
 ```
 docker run alpine printenv
 
-docker run eclipse-temurin:25-jre printenv
+docker run ghcr.io/yasinoz/library/eclipse-temurin:25-jre printenv
 ```
 
 > You'll see variables set by the OS and in the container package.
@@ -70,7 +70,7 @@ docker run -e COURSELABS=env alpine printenv
 You can add as many environment variables as you need, and you can also *override* default variables for the container:
 
 ```
-docker run -e COURSELABS=env -e LANG=C.UTF-16 eclipse-temurin:25-jre printenv
+docker run -e COURSELABS=env -e LANG=C.UTF-16 ghcr.io/yasinoz/library/eclipse-temurin:25-jre printenv
 ```
 
 > This overrides the default language setting in the Java container.
@@ -106,7 +106,7 @@ Containers filesystems are virtual disks, put together by Docker. Every containe
 
 ```
 # alpine is the smallest variant but any will do:
-docker run -d --name nginx nginx:alpine
+docker run -d --name nginx ghcr.io/yasinoz/library/nginx:alpine
 ```
 
 </details><br/>
@@ -139,7 +139,7 @@ htmlPath="${PWD}/labs/env/html"
 $htmlPath="${PWD}/labs/env/html"
 
 # run a container mounting the local volume to the HTML directory:
-docker run -d -p 8081:80 -v ${htmlPath}:/usr/share/nginx/html --name nginx2 nginx:alpine
+docker run -d -p 8081:80 -v ${htmlPath}:/usr/share/nginx/html --name nginx2 ghcr.io/yasinoz/library/nginx:alpine
 ```
 
 - `-v` mounts a local directory to the container - the variables store the full path and mean we can use the same Docker command on any OS
@@ -155,7 +155,7 @@ You can restrict the amount of compute power containers have. By default there's
 Run a compute-intensive app without restrictions:
 
 ```
-docker run -d -p 8031:80 --name pi kiamol/ch05-pi -m web 
+docker run -d -p 8031:80 --name pi ghcr.io/yasinoz/kiamol/ch05-pi:latest -m web 
 ```
 
 - the `-m` flag gets passed to the application inside the container, it's not a container configuration.
@@ -184,7 +184,7 @@ Try running a the same app in a container with only 200Mb of memory and 1/4 of a
 ```
 docker rm -f pi
 
-docker run -d -p 8031:80 --name pi --memory 200m --cpus 0.25 kiamol/ch05-pi -m web 
+docker run -d -p 8031:80 --name pi --memory 200m --cpus 0.25 ghcr.io/yasinoz/kiamol/ch05-pi:latest -m web 
 ```
 
 > Refresh http://localhost:8031/pi?dp=50000 and it will take much longer - over 13s on my machine
@@ -206,7 +206,7 @@ In this lab your job is to copy the TLS certificate and key from the container o
 Start by generating certs in a new named container - run it in the background and the container will stay up:
 
 ```
-docker run -d --name tls kiamol/ch15-cert-generator
+docker run -d --name tls ghcr.io/yasinoz/kiamol/ch15-cert-generator:latest
 ```
 
 Now copy the `server-cert.pem` and `server-key.pem` files from the `/certs` folder in the container onto your machine.

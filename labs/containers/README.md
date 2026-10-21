@@ -91,7 +91,7 @@ Those containers didn't do anything useful, but  one-off containers can be good 
 Try a container which generates a security certiicate you can use for HTTPS in dev environments:
 
 ```
-docker run -it kiamol/ch15-cert-generator
+docker run -it ghcr.io/yasinoz/kiamol/ch15-cert-generator:latest
 ```
 
 > The `-it` flag attaches your terminal, so you can send commands to the container. When you see the output `Certs generated`, exit the container by pressing Ctrl-C / Cmd-C.
@@ -178,7 +178,7 @@ Containers are isolated - the changes you made to add curl were in a different c
 Interactive containers can do fun things with the screen - this is useful to impress people with your hacking skills :)
 
 ```
-docker run -it sixeyed/hollywood
+docker run -it ghcr.io/yasinoz/sixeyed/hollywood:latest
 
 # Ctrl-C / Cmd-C to stop the process
 
@@ -197,7 +197,7 @@ You'll use background containers for web servers, batch processes, databases mes
 Try running the [Nginx](https://nginx.org) web server in a container:
 
 ```
-docker run -d -P --name nginx1 nginx:alpine
+docker run -d -P --name nginx1 ghcr.io/yasinoz/library/nginx:alpine
 ```
 
 - the `-d` flag runs a detached background container
