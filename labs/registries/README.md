@@ -6,7 +6,7 @@ section: basics
 order: 4
 duration: 30
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/registries
 ---
 

@@ -6,7 +6,7 @@ section: orchestration
 order: 2
 duration: 50
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/kubernetes
 ---
 # Kubernetes
