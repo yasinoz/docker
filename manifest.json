@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated": "2026-10-21",
+  "generated": "2026-10-22",
   "track": {
     "slug": "docker",
     "titles": {
@@ -97,7 +97,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/images",
           "docs": {
             "en": {
@@ -159,7 +159,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/compose",
           "docs": {
             "en": {
@@ -183,7 +183,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/compose-model",
           "docs": {
             "en": {
@@ -231,7 +231,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/compose-limits",
           "docs": {
             "en": {
@@ -269,7 +269,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/multi-stage",
           "docs": {
             "en": {
@@ -293,7 +293,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/networking",
           "docs": {
             "en": {
@@ -389,7 +389,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/troubleshooting",
           "docs": {
             "en": {
@@ -410,7 +410,8 @@
     "en": 13,
     "tr": 0,
     "by_status": {
-      "needs-review": 13
+      "needs-review": 6,
+      "updated": 7
     }
   }
 }
