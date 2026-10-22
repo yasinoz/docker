@@ -6,7 +6,7 @@ section: compose
 order: 2
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/compose-model
 ---
 # Modelling apps with Compose
