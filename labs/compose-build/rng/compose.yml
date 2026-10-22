@@ -1,7 +1,0 @@
-services:
-
-  rng-api:
-    image: ghcr.io/yasinoz/courselabs/rng-api:21.05
-
-  rng-web:
-    image: ghcr.io/yasinoz/courselabs/rng-web:21.05
