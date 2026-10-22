@@ -49,7 +49,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/containers",
           "docs": {
             "en": {
@@ -73,7 +73,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/env",
           "docs": {
             "en": {
@@ -121,7 +121,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/registries",
           "docs": {
             "en": {
@@ -207,7 +207,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/compose-build",
           "docs": {
             "en": {
@@ -331,7 +331,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/orchestration",
           "docs": {
             "en": {
@@ -353,7 +353,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/kubernetes",
           "docs": {
             "en": {
@@ -410,8 +410,7 @@
     "en": 13,
     "tr": 0,
     "by_status": {
-      "needs-review": 6,
-      "updated": 7
+      "updated": 13
     }
   }
 }

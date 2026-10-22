@@ -6,7 +6,7 @@ section: basics
 order: 1
 duration: 40
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/containers
 ---
 # Running Containers
