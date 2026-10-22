@@ -6,7 +6,7 @@ section: advanced
 order: 2
 duration: 40
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/networking
 ---
 # Container Networking

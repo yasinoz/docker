@@ -6,7 +6,7 @@ section: compose
 order: 4
 duration: 35
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/compose-limits
 ---
 # Limitations of Compose
